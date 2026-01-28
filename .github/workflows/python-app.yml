@@ -39,6 +39,12 @@ jobs:
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"
     
+    - name: Display test_data.yaml contents
+      run: |
+        echo "=== test_data.yaml contents ==="
+        cat test_data.yaml
+        echo "==============================="
+
     - name: Test with pytest
       run: |
-        pytest
+        pytest -v
